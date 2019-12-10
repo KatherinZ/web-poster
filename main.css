@@ -23,19 +23,72 @@ body{
   background-color: #000;
   color: #fff;
 }
+.circles{
+  margin: 70px;
+  margin-top: 200px;
+
+
+
+}
+.circle_1{
+  position: absolute;
+  margin: 40px;
+  width: 70px;
+  height: 70px;
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  animation: rotate 4s 0s linear infinite;
+}
+.circle_2{
+  position: absolute;
+  padding: 50px;
+  width: 45px;
+  height: 45px;
+  border-top: 3px solid #fff;
+  border-right: 5px solid #fff;
+  border-radius: 50%;
+  transform: rotate(60deg);
+  animation: rotate 3s 0s reverse ease-in-out infinite;
+}
+.circle_3{
+  position: absolute;
+  padding: 40px;
+  margin-left: 25px;
+  margin-top: 20px;
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-radius: 50%;
+  transform: rotate(250deg);
+  animation: rotate 5s 3s  ease-in infinite;
+}
+@keyframes rotate {
+  from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
 header{
-  margin: 25px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-left: 60px;
 }
 
 p:last-child{
   margin-top: 5px;
 }
 h1{
-font-size: 5vw;
+font-size: 3vw;
 font-weight: bold;
 }
 h3{
-font-size: 2vw;
+font-size: 1vw;
+padding-top: 10px;
+
 }
 p span{
   display: flex;
@@ -88,6 +141,39 @@ p span{
 .big-block p:first-child{
   margin-top: 15px;
 }
+ .big-block:hover{
+   background-color: #3B214F;
+ }
+ .top .side-block-1:hover{
+   background-color: #245D5A;
+ }
+ .top-left .side-block-1:hover{
+   background-color: #611A1A;
+ }
+ .bottom-left .side-block-1:hover{
+   background-color: #611A1A;
+ }
+ .top .side-block-2:hover{
+   background-color: #F38C8C;
+ }
+ .bottom-mid .side-block-2:hover{
+   background-color: #C5F3F1;
+   color: black;
+ }
+ .bottom .side-block-2:hover{
+   background-color: #C5F3F1;
+   color: black;
+ }
+ .bottom .side-block-1:hover{
+   background-color: #245D5A;
+ }
+ .bottom-mid .big-block:hover{
+   background-color: #455AD1;
+
+ }
+ .right-mid .side-block-2:hover{
+   background-color: #245D5A;
+ }
 
 
 .side-block-1{
@@ -199,10 +285,12 @@ margin-left: 250px;
   header h1{
     font-size: 28px;
     line-height: 28px;
+    margin-left: -400px;
   }
     header h3{
       font-size: 18px;
       margin-top: 10px;
+      margin-left: -400px;
     }
     .elements{
       margin-left: -60px;
