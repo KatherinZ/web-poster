@@ -23,7 +23,7 @@ body{
   background-color: #000;
   color: #fff;
 }
-.circles{
+/* .circles{
   margin: 70px;
   margin-top: 200px;
 
@@ -71,7 +71,8 @@ body{
 		to {
 				-webkit-transform: rotate(359deg);
 		}
-}
+} */
+
 header{
   margin-top: 5px;
   margin-bottom: 15px;
@@ -279,9 +280,52 @@ margin-left: 250px;
 .element_3 .side-block-2{
   margin-top: -80px;
 }
+@media (max-width: 1024px){
+  .element_3 .bottom{
+    position: relative;
+    margin-left: -270px;
+    margin-top: -132px;
+  }
+  .element_1 .bottom-mid{
+    margin-left: 385px;
+    margin-top: 55px;
+  }
+  .element_1 .right-mid{
+    margin-top: 324px;
+    margin-left: -268px;
+  }
 
+}
 
-@media (max-width: 320px) {
+@media (max-width: 834px){
+
+  .element_1 .bottom-left{
+    margin-left: 136px;
+
+  }
+  .element_1 .top-left{
+    margin-left: 197px;
+    margin-top: 132px;
+  }
+  .element_3 .bottom{
+    position: relative;
+    margin-top: -319px;
+  }
+  .element_1 .bottom-mid{
+    position: relative;
+    margin-left: 195px;
+    margin-top: 189px;
+  }
+  .element_1 .right-mid{
+    margin-left: -267px;
+    margin-top: 0px;
+  }
+}
+@media (max-width: 414px) {
+   body{
+     width: 414px;
+     align-items: center;
+   }
   header h1{
     font-size: 28px;
     line-height: 28px;
