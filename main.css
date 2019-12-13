@@ -1,7 +1,7 @@
 @import "reset.css";
 @font-face {
   font-family: 'AkzidentzGrotesk';
-  src: url(fonts/Akzidenz-Grotesk-Pro-Regular.ttf)
+  src: url(./fonts/Akzidenz-Grotesk-Pro-Regular.ttf)
   format('truetype');
   font-weight: 400;
 }
@@ -17,23 +17,24 @@
 }
 :root{
   --blue: #9cc3cd;
-  --beige: #f4ead9;
+  --beige: 217;
   --orange: #a0622d;
   --brown: #34120e;
 }
 body{
   font-family: 'AkzidentzGrotesk', helvetica, sans-serif;
-  /* width: 100vw;
-  height: 100vh; */
   background-color: #000;
   color: #fff;
+}
+
+.elements{
+  margin: 0;
+  position: absolute;
+  margin: auto;
 }
 /* .circles{
   margin: 70px;
   margin-top: 200px;
-
-
-
 }
 .circle_1{
   position: absolute;
@@ -270,7 +271,7 @@ margin-left: 250px;
 .bottom .big-block:hover,
 .top .big-block:hover{
   background-color: var(--brown);
-  animation: slow 1s ease-in-out;
+  animation: brown-slow 0.2s ease;
 }
 .top-left .big-block:hover,
 .right-mid .big-block:hover,
@@ -278,25 +279,50 @@ margin-left: 250px;
 .bottom-mid .big-block:hover{
   background-color: var(--beige);
   color: #000;
+  animation: beige-slow 0.2s ease;
 }
 .side-block-1:hover{
   background-color: var(--blue);
   color: #000;
+  animation: blue-slow 0.2s ease;
 }
 .side-block-2:hover{
   background-color: var(--orange);
+  animation: orange-slow 0.2s ease;
 }
-@keyframes slow {
+@keyframes brown-slow {
   0%{
-    opacity: 0.2;
-  }
-  50%{
-    opacity: 0.6;
+    background-color: rgba(52, 18, 14, 0.01);
   }
   100%{
-    opacity: 1;
+    background-color: rgba(52, 18, 14, 1);
   }
 }
+@keyframes beige-slow {
+  0%{
+    background-color: rgba(244, 234, 217, 0.01);
+  }
+  100%{
+    background-color: rgba(244, 234, 217, 1);
+  }
+}
+@keyframes blue-slow {
+  0%{
+    background-color: rgba(156, 195, 205, 0.01);
+  }
+  100%{
+    background-color: rgba(156, 195, 205, 1);
+  }
+}
+@keyframes orange-slow {
+  0%{
+    background-color: rgba(160, 98, 45, 0.01);
+  }
+  100%{
+    background-color: rgba(160, 98, 45, 1);
+  }
+}
+
 /* hovers */
 
 footer{
@@ -307,7 +333,7 @@ footer{
   margin-right: 100px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 footer p span{
   display: flex;
@@ -318,37 +344,39 @@ footer p span{
 
 @media (max-width: 1024px){
   .element_3 .bottom{
-    position: relative;
-    margin-left: -270px;
+    margin-left: -266px;
     margin-top: -132px;
+    transition: all 2s ease;
   }
   .element_1 .bottom-mid{
-    margin-left: 385px;
-    margin-top: 55px;
+    margin-left: 381px;
+    margin-top: 57px;
+    transition: all 2s ease;
   }
   .element_1 .right-mid{
-    margin-top: 324px;
-    margin-left: -268px;
+    margin-top: 321px;
+    margin-left: -264px;
+    transition: all 2s ease;
   }
   footer{
     margin-top: 200px;
     margin-bottom: 10px;
+    transition: all 2s ease;
   }
 }
 
 @media (max-width: 834px){
-
   .element_1 .bottom-left{
-    margin-left: 136px;
+    margin-left: 133px;
 
   }
   .element_1 .top-left{
-    margin-left: 197px;
+    margin-left: 193px;
     margin-top: 132px;
   }
   .element_3 .bottom{
     position: relative;
-    margin-top: -319px;
+    margin-top: -321px;
   }
   .element_1 .bottom-mid{
     position: relative;
@@ -356,7 +384,7 @@ footer p span{
     margin-top: 189px;
   }
   .element_1 .right-mid{
-    margin-left: -267px;
+    margin-left: -262px;
     margin-top: 0px;
   }
   footer{
@@ -365,29 +393,41 @@ footer p span{
   }
 }
 @media (max-width: 768px){
-
 .last .element_3{
-  margin-top: 320px;
-  margin-left: 99px;
-}
-.top{
-  margin-left: 400px;
+  margin-top: 323px;
+  margin-left: 95px;
+  transition: all 2s ease;
 }
 .last .element_1{
   margin-top: -73px;
-  margin-left: 280px;
+  margin-left: 275px;
+  transition: all 2s ease;
+}
+.top{
+  margin-top: 2px;
+  margin-left: 400px;
+  transition: all 2s ease;
 }
 .element_1 .top-left{
-  margin-top: -114px;
+  margin-top: -113px;
   margin-left: 79px;
+  transition: all 2s ease;
 }
 .element_1 .bottom-mid{
   margin-top: 322px;
   margin-left: 286px;
+  transition: all 2s ease;
 }
 .element_3 .bottom-left{
-  margin-top: 396px;
+  margin-top: 397px;
   margin-left: -227px;
+  transition: all 2s ease;
+}
+.big-block{
+  flex-shrink: 0;
+}
+.side-block-1{
+  flex-shrink: 0;
 }
 footer{
   margin-top: 500px;
@@ -395,89 +435,162 @@ footer{
 }
 }
 @media (max-width: 414px) {
- body{
-    width: 414px;
-    align-items: center;
-  }
+
  header h1{
    font-size: 28px;
    line-height: 28px;
-   margin-left: -400px;
  }
    header h3{
      font-size: 18px;
      margin-top: 10px;
-     margin-left: -400px;
    }
-   .elements{
-     margin-left: -60px;
-   }
-   .elements .element_1{
+   main{
      display: flex;
      flex-direction: column;
      align-items: center;
-
    }
-   .elements .element_3{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     position: absolute;
+   .element_1 .top{
+     margin-top: 150px;
+     margin-left: 233px;
    }
-   .element_3 .bottom-left{
-     margin-top: 400px;
-     margin-left: -660px;
+   .element_3 .bottom{
+     margin-left: -376px;
+     margin-top: -190px;
    }
    .element_1 .top-left{
      margin-top: 260px;
-     margin-left: 240px;
+     margin-left: 233px;
    }
-   .element_3 .bottom{
-     margin-left: -400px;
-     margin-top: 585px;
-     position: absolute;
+   .element_3 .bottom-left{
+     margin-top: 200px;
+     margin-left: -150px;
    }
 
    .element_1 .bottom-mid{
      margin-top: 260px;
-     margin-left: 120px;
+     margin-left: 233px;
      position: absolute;
    }
    .element_1 .right-mid{
-     margin-top: 983px;
-     margin-left: -790px;
+     margin-top: 1110px;
+     margin-left: -556px;
    }
+
+
    .right-mid .side-block-1{
      position: absolute;
      margin-top: -185px;
      margin-left: 55px;
-
    }
    .right-mid .side-block-2{
      position: absolute;
      margin-top: -131px;
-     margin-left: 191px;
+     margin-left: 187px;
    }
-
-/* .element_1 .side-block-1{
- margin-left: 4px;
-}
-.element_1 .side-block-2{
- margin-left: 136px;
-}
-.element_1 .big-block{
- margin-left: -4px;
-} */
-   .top-left,
-   .top,
-   .bottom-mid,
-   .right-mid .side-block-1{
-    margin-bottom: 5px;
+   footer{
+     margin-top: 100px;
+     margin-bottom: 10px;
    }
 }
+@media (max-width: 320px) {
+  header h1{
+    font-size: 24px;
+    line-height: 24px;
+  }
+    header h3{
+      font-size: 22px;
+      margin-top: 10px;
+    }
+    main{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .element_1 .top{
+      margin-top: 150px;
+      margin-left: 233px;
+    }
+    .element_3 .bottom{
+      margin-left: -376px;
+      margin-top: -190px;
+    }
+    .element_1 .top-left{
+      margin-top: 260px;
+      margin-left: 233px;
+    }
+    .element_3 .bottom-left{
+      margin-top: 200px;
+      margin-left: -150px;
+    }
 
-/* .side-block-1 .side-block-2{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-} */
+    .element_1 .bottom-mid{
+      margin-top: 260px;
+      margin-left: 233px;
+      position: absolute;
+    }
+    .element_1 .right-mid{
+      margin-top: 1110px;
+      margin-left: -556px;
+    }
+    .right-mid .side-block-1{
+      position: absolute;
+      margin-top: -185px;
+      margin-left: 55px;
+    }
+    .right-mid .side-block-2{
+      position: absolute;
+      margin-top: -131px;
+      margin-left: 187px;
+    }
+
+    .side-block-1{
+      position: relative;
+      box-sizing: border-box;
+      border: 4px solid #fff;
+      width: 115px;
+      height: 115px;
+    }
+    .side-block-1 h2{
+      font-size: 36px;
+      font-weight: 400;
+      margin-left: 5px;
+      padding: 5px;
+    }
+    .side-block-1 p{
+      font-size: 11px;
+      font-weight: 400;
+      margin-left: 15px;
+    }
+    .side-block-1 p:first-child{
+      margin-top: 10px;
+    }
+    .side-block-2{
+      box-sizing: border-box;
+      position: absolute;
+      box-sizing: border-box;
+      border: 4px solid #fff;
+      width: 115px;
+      height: 115px;
+    }
+    .side-block-2 h2{
+      font-size: 36px;
+      font-weight: 400;
+      margin-left: 5px;
+      padding: 5px;
+    }
+    .side-block-2 p{
+      font-size: 11px;
+      font-weight: 400;
+      margin-left: 15px;
+    }
+    .side-block-2 p:first-child{
+      margin-top: 10px;
+    }
+    .big-block{
+    box-sizing: border-box;
+    border: 4px solid #fff;
+    width: 165px;
+    height: 165px;
+    margin-bottom: -4px;
+  }
+}
