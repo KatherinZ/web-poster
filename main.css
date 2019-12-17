@@ -100,7 +100,7 @@ p span{
   margin-top: 110px;
 }
 .big-block .numbers p:last-child{
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .side-block-1{
@@ -257,6 +257,18 @@ p span{
   }
 
 }
+.bottom-mid .big-block{
+  background-image: url(./img/oat.svg);
+  background-repeat: no-repeat;
+  background-size: 40% 40%;
+  background-position: 10px 65px;
+}
+.bottom-left .big-block{
+  background-image: url(./img/coco.svg);
+  background-repeat: no-repeat;
+  background-size: 40% 40%;
+  background-position: 10px 65px;
+}
 .bottom .big-block{
   background-image: url(./img/jug.svg);
   background-repeat: no-repeat;
@@ -266,7 +278,7 @@ p span{
 }
 @keyframes wave {
   0%{
-    background-image: url(./img/jug.svg);
+    background-image: url(./img/jug_1.svg);
   }
   24% {
     background-image: url(./img/jug.svg);
@@ -292,20 +304,10 @@ p span{
   100%{
     background-image: url(./img/jug_1.svg);
   }
-  }
+
 }
-.bottom-mid .big-block{
-  background-image: url(./img/oat.svg);
-  background-repeat: no-repeat;
-  background-size: 40% 40%;
-  background-position: 10px 65px;
-}
-.bottom-left .big-block{
-  background-image: url(./img/coco.svg);
-  background-repeat: no-repeat;
-  background-size: 40% 40%;
-  background-position: 10px 65px;
-}
+
+
 .top-left{
   margin-top: 75px;
 }
@@ -525,7 +527,7 @@ footer .lab{
     transition: all 2s ease;
   }
 }
-
+@media (max-width: 834px){
 @media (max-width: 834px){
   .element_1 .bottom-left{
     margin-left: 133px;
@@ -594,6 +596,48 @@ footer{
   margin-top: 500px;
   margin-bottom: 10px;
 }
+}
+@media (max-width: 519px) {
+  .element_1 .top{
+    margin-top: 150px;
+    margin-left: 233px;
+  }
+  .element_3 .bottom{
+    margin-left: -510px;
+    margin-top: -190px;
+  }
+  .element_1 .top-left{
+    margin-top: 80px;
+    margin-left: 101px;
+  }
+  .element_3 .bottom-left{
+    margin-top: 200px;
+    margin-left: -150px;
+  }
+
+  .element_1 .bottom-mid{
+    margin-top: 260px;
+    margin-left: 233px;
+    position: absolute;
+  }
+  .element_1 .right-mid{
+    margin-top: 1110px;
+    margin-left: -556px;
+  }
+
+ .elements{
+  margin-top: -100px;
+ }
+  .right-mid .side-block-1{
+    position: absolute;
+    margin-top: -185px;
+    margin-left: 55px;
+  }
+  .right-mid .side-block-2{
+    position: absolute;
+    margin-top: -131px;
+    margin-left: 187px;
+  }
 }
 @media (max-width: 414px) {
 
